@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% include head.html %}
+
+<body>
+<div id="landing", class="page">
+    <div class="landing-title">
+      <h1>Hi, I&#39;m
+        <span class="highlight">{{site.author.name}}</span>
+      </h1>
+      <h2>
+        I am a <span class="highlight">developer</span> from Phoenix, AZ.
+      </h2>
+      <div class="landing-icons">
+        {% if site.author.email != null %}
+          <a class="social-link email" aria-label="My E-Mail" href="mailto:{{site.author.email}}">
+            <svg viewBox="0 0 200 200" class="circle">
+              <circle cx="100" cy="100" r="80" />
+            </svg>
+            <div class="social">
+              <svg class="social-svg" viewBox="0 0 48 48">
+                <use x="12" y="12" width="24" height="24" viewBox="0 0 48 48" xlink:href="{{ "/assets/img/solid.svg#envelope" | prepend: site.baseurl }}""></use>
+              </svg>
+            </div>
+            <span class="label">E-Mail</span>
+          </a>
+        {% endif %}
+  
+        {% if site.socials != null %}
+          <a class="social-link" aria-label="My GitHub" target="_blank" rel="noreferrer"
+            href="https://github.com/{{site.socials.github}}"
+          >
+            <svg viewBox="0 0 200 200" class="circle">
+              <circle cx="100" cy="100" r="80" />
+            </svg>
+            <div class="social">
+              <svg class="social-svg" viewBox="0 0 48 48">
+                <use x="12" y="12" width="24" height="24" viewBox="0 0 48 48" xlink:href="{{ "/assets/img/brands.svg#github" | prepend: site.baseurl }}"></use>
+              </svg>
+            </div>
+            <span class="label">GitHub</span>
+          </a>
+        {% endif %}
+  
+        {% if site.socials.codepen != null %}
+          <a class="social-link" aria-label="My Codepen" target="_blank" rel="noreferrer"
+            href="https://codepen.io/{{site.socials.codepen}}"
+          >
+            <svg viewBox="0 0 200 200" class="circle">
+              <circle cx="100" cy="100" r="80" />
+            </svg>
+            <div class="social">
+              <svg class="social-svg" viewBox="0 0 48 48">
+                <use x="12" y="12" width="24" height="24" viewBox="0 0 48 48" xlink:href="{{ "/assets/img/brands.svg#codepen" | prepend: site.baseurl }}"></use>
+              </svg>
+            </div>
+            <span class="label">CodePen</span>
+          </a>
+        {% endif %}
+  
+        {% if site.socials.dev != null %}
+          <a class="social-link" aria-label="My DEV" target="_blank" rel="noreferrer"
+            href="https://dev.to/{{site.socials.dev}}"
+          >
+            <svg viewBox="0 0 200 200" class="circle">
+              <circle cx="100" cy="100" r="80" />
+            </svg>
+            <div class="social">
+              <svg class="social-svg" viewBox="0 0 48 48">
+                <use x="12" y="12" width="24" height="24" viewBox="0 0 48 48" xlink:href="{{ "/assets/img/brands.svg#dev" | prepend: site.baseurl }}"></use>
+              </svg>
+            </div>
+            <span class="label">DEV</span>
+          </a>
+        {% endif %}
+  
+        {% if site.socials.linkedin != null %}
+          <a class="social-link linkedin" aria-label="My LinkedIn" target="_blank"
+            rel="noreferrer" href="https://www.linkedin.com/in/{{site.socials.linkedin}}"
+          >
+            <svg viewBox="0 0 200 200" class="circle">
+              <circle cx="100" cy="100" r="80" />
+            </svg>
+            <div class="social">
+              <svg class="social-svg" viewBox="0 0 48 48">
+                <use x="12" y="12" width="24" height="24" viewBox="0 0 48 48" xlink:href="{{ "/assets/img/brands.svg#linkedin-in" | prepend: site.baseurl }}"></use>
+              </svg>
+            </div>
+            <span class="label">LinkedIn</span>
+          </a>
+        {% endif %}
+  
+        {% if site.socials.twitter != null %}
+          <a class="social-link twitter" aria-label="My Twitter" target="_blank"
+            rel="noreferrer" href="https://twitter.com/{{site.socials.twitter}}"
+          >
+            <svg viewBox="0 0 200 200" class="circle">
+              <circle cx="100" cy="100" r="80" />
+            </svg>
+            <div class="social">
+              <svg class="social-svg" viewBox="0 0 48 48">
+                <use x="12" y="12" width="24" height="24" viewBox="0 0 48 48" xlink:href="{{ "/assets/img/brands.svg#twitter" | prepend: site.baseurl }}"></use>
+              </svg>
+            </div>
+            <span class="label">Twitter</span>
+          </a>
+        {% endif %}
+      </div>
+      <div class="buttons">
+        <div class="button">
+          <span class="right-arrow">&#x2192;</span>
+          <a href="/about"><span class="button-text">About</span></a>
+          <span class="left-arrow">&#x2190;</span>
+        </div>
+        <div class="button">
+          <span class="right-arrow">&#x2192;</span>
+          <a href="/works"><span class="button-text">Works</span></a>
+          <span class="left-arrow">&#x2190;</span>
+        </div>
+        <div class="button">
+          <span class="right-arrow">&#x2192;</span>
+          <a href="/contact"><span class="button-text">Contact</span></a>
+          <span class="left-arrow">&#x2190;</span>
+        </div>
+    </div>
+    </div>
+  </div>
+  {% include scripts.html %}
+</body>
+</html>

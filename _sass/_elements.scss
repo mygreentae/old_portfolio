@@ -1,0 +1,243 @@
+/* landing */
+#landing {
+    background: $bg-color;
+    color: $text-color;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.landing-title {
+    left: 0;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    position: absolute;
+    right: 0;
+    top: 40%;
+}
+  
+.landing-icons {
+    display: flex;
+    justify-content: center;
+  
+    .social-link {
+      color: $text-color;
+      position: relative;
+      height: 3rem;
+      line-height: 3rem;
+      margin: 0.25rem;
+      width: 3rem;
+  
+      .circle {
+        animation: outWaveOut 1s cubic-bezier(0.42, 0, 0.58, 1) forwards;
+        fill: none;
+        stroke-dasharray: 40;
+        transition: all 0.2s ease-in-out;
+      }
+  
+      .social {
+        font-size: 1.5rem;
+        position: absolute;
+        top: 0px;
+        transition: all 0.5s ease-in-out;
+        width: 100%;
+      }
+  
+      .social-svg {
+        fill: white;
+      }
+  
+      .label {
+        display: none;
+      }
+  
+      &:hover {
+        cursor: pointer;
+  
+        .circle {
+          animation: outWaveIn 1s cubic-bezier(0.42, 0, 0.58, 1) forwards,
+            colorBlackIcon 1s linear forwards;
+          fill: $text-color;
+          fill-opacity: 1;
+        }
+  
+        .social-svg {
+          fill: #000;
+        }
+  
+        .label {
+          display: unset !important;
+          position: relative;
+          top: -2rem;
+        }
+      }
+    }
+  
+    .email:hover {
+      .circle {
+        animation: outWaveIn 1s cubic-bezier(0.42, 0, 0.58, 1) forwards,
+          colorEmail 1s linear forwards;
+      }
+    }
+  
+    .linkedin:hover {
+      .circle {
+        animation: outWaveIn 1s cubic-bezier(0.42, 0, 0.58, 1) forwards,
+          colorLinkedin 1s linear forwards;
+      }
+      
+    }
+  
+    .twitter:hover {
+      .circle {
+        animation: outWaveIn 1s cubic-bezier(0.42, 0, 0.58, 1) forwards,
+          colorTwitter 1s linear forwards;
+      }
+      
+    }
+  
+    @keyframes outWaveIn {
+      to {
+        stroke-dasharray: 510;
+        stroke-width: 0.5rem;
+      }
+    }
+  
+    @keyframes outWaveOut {
+      from {
+        stroke: $text-color;
+        stroke-dasharray: 510;
+        stroke-width: 0.5rem;
+      }
+      to {
+        stroke: $text-color;
+        stroke-dasharray: 83;
+        stroke-width: 0.5rem;
+      }
+    }
+  }
+
+.button {
+  border: none;
+  color: $text-color;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+
+.left-arrow, .right-arrow {
+  display: inline-block;
+  font-size: 20px;
+  margin: 0 10px;
+}
+
+.button:hover {
+  color: $primary-color;
+}
+
+.button:hover .left-arrow {
+  animation: moveLeft 0.5s linear infinite;
+}
+
+.button:hover .right-arrow {
+  animation: moveRight 0.5s linear infinite;
+}
+
+
+.button-text {
+  display: inline-block;
+  margin: 0 5px;
+  color: $text-color
+}
+
+@keyframes moveLeft {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveRight {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+
+/* works */
+
+.work {
+  border: 2px double transparent;
+  border-radius: 30px;
+  transition: border-color 0.3s;
+  padding: 2rem;
+  margin-bottom: 20px;
+}
+
+.work:hover {
+  border-color: $text-color;
+}
+
+/* Contact */
+.contact {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 5rem;
+  padding-bottom: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-family: $font-family;
+  border: 2px double;
+}
+
+.contact form {
+  display: grid;
+  gap: 10px;
+}
+
+.contact label {
+  font-weight: bold;
+}
+
+.contact input[type="text"],
+.contact textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.contact textarea {
+  resize: vertical;
+}
+
+.contact .actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+input.name {
+  background-color: $text-color;
+}
+
+input.button {
+  background-color: transparent;
+  font-family: $font-family;
+}

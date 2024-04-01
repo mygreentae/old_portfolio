@@ -1,0 +1,20 @@
+---
+layout: default
+---
+
+<h1><strong>Works</strong></h1>
+<hr>
+
+{% assign sorted_works = site.works | sort: 'order' %}
+{% for work in sorted_works %}
+    <div class="work">
+        <h2><strong>{{ work.title }}</strong></h2>
+        <p>{{ work.description}} </p>
+        <div class="button">
+            <span class="right-arrow">&#x2192;</span>
+            <a href="{{ work.link | relative_url }}"><span class="button-text">See this project</span></a>
+            <span class="left-arrow">&#x2190;</span>
+        </div>
+    </div>
+    
+{% endfor %}

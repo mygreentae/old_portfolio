@@ -1,0 +1,61 @@
+/* General */
+
+html, body {
+    background: $bg-color;
+    color: $text-color;
+    font-family: $font-family;
+    font-size: $font-size-base;
+    margin-left:10rem;
+    margin-right: 10rem;
+    margin-top: 2rem;
+    padding: 10px;
+    overflow: auto;
+  }
+
+
+  header {
+    color: $text-color;
+    font-family: $font-family;
+    font-size: $font-size-base;
+    padding: 10px;
+    text-align: left;
+    
+}
+
+.back-link {
+  color: $text-color;
+}
+
+.back-arrow {
+  position: relative;
+  font-size: 20px;
+  margin: 0 10px;
+  transition: left 0.6s cubic-bezier(0.25, 0.1, 0.25, 1);;
+  transform: translateX(10%);
+  right: 0px;
+}
+
+.back-link:hover .back-arrow{
+  right: 20px; /* adjust the value as needed */
+}
+
+
+.back-link:hover {
+  color: $primary-color;
+}
+
+hr {
+  width: 25%;
+  margin-left: 0px;
+}
+
+.page {
+  opacity: 0; /* Initially hide the page */
+  transition: opacity 0.5s ease; /* Add a transition effect for opacity */
+}
+
+.page.active {
+  opacity: 1; /* Show the page when it has the 'active' class */
+}
+
+
