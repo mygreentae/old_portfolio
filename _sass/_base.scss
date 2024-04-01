@@ -5,21 +5,29 @@ html, body {
     color: $text-color;
     font-family: $font-family;
     font-size: $font-size-base;
-    margin-left:10rem;
-    margin-right: 10rem;
-    margin-top: 2rem;
-    padding: 10px;
     overflow: auto;
   }
 
+body {
+  margin: 0;
+  padding: 0;
+}
 
-  header {
-    color: $text-color;
-    font-family: $font-family;
-    font-size: $font-size-base;
-    padding: 10px;
-    text-align: left;
+header {
+  color: $text-color;
+  font-family: $font-family;
+  font-size: $font-size-base;
+  padding: 10px;
+  text-align: left;
     
+}
+
+.container {
+  margin-left: 15rem;
+  margin-right: 15rem;
+  margin-top: 5rem;
+  padding: 10px;
+  position: absolute;
 }
 
 .back-link {
@@ -58,4 +66,12 @@ hr {
   opacity: 1; /* Show the page when it has the 'active' class */
 }
 
+#particles-js{
+  background-image: url('');
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  background-repeat: no-repeat;
+  position: fixed;
+}
 
