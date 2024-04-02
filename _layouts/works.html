@@ -12,7 +12,13 @@ layout: default
         <p>{{ work.description}} </p>
         <div class="button">
             <span class="right-arrow">&#x2192;</span>
-            <a href="{{ work.link | relative_url }}"><span class="button-text">See this project</span></a>
+            {% if work.title == 'Portfolio' %}
+                <a href="{{ work.link | relative_url }}" ><span class="button-text">See this project</span></a>
+            
+            {% else %}
+            <a href="{{ work.link | relative_url }}" target="_blank"><span class="button-text">See this project</span></a>
+            {% endif %}
+            
             <span class="left-arrow">&#x2190;</span>
         </div>
     </div>
