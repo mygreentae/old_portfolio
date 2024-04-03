@@ -5,10 +5,17 @@ layout: default
 <h1><strong>Works</strong></h1>
 <hr>
 
-{% assign sorted_works = site.works | sort: 'order' %}
+{% assign sorted_works = site.works | sort: 'date-started' | reverse %}
 {% for work in sorted_works %}
     <div class="work">
         <h2><strong>{{ work.title }}</strong></h2>
+
+        {% if {{work.date-ended}} %}
+            <p>{{ work.date-started }} &#8212; {{ work.date-ended }}</p>
+        {% else %}
+            <p>{{ work.date-started }} &#8212; Present</p>
+        {% endif %}
+
         <p>{{ work.description}} </p>
         <div class="button">
             <span class="right-arrow">&#x2192;</span>
