@@ -20,7 +20,7 @@ Outside of working, I tend to be crafty so I like to crochet or study new langua
 
 ### **Programming Languages**
 
-The programming languages I know and have worked with are: Python3, Java, C/C++, Ruby, Perl, R Prolog (SWI/GNU), HTML, CSS, JavaScript, PHP, Bash, Haskell
+The programming languages I know and have worked with are: Python3, Java, C/C++, Ruby, Perl, R, Prolog (SWI/GNU), HTML, CSS, JavaScript, PHP, Bash, Haskell
 
 ### **Technologies and Tools**
 
