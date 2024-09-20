@@ -20,8 +20,8 @@
 
 title: Leighanna
 description:
-baseurl: ""
-url: "https://mygreentae.github.io/old_portfolio"
+baseurl: "/old_portfolio"
+url: "https://mygreentae.github.io/"
 
 author:
   name: Leighanna Pipatanangkura

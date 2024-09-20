@@ -1,7 +1,7 @@
 document.addEventListener(
   "DOMContentLoaded",
   (event) => {
-    particlesJS.load("particles-js", "/assets/js/particles.json", function () {
+    particlesJS.load("particles-js", "/old_portfolio/assets/js/particles.json", function () {
       console.log("particles.js loaded - callback");
     });
   },
